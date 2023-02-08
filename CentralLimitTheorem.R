@@ -1,12 +1,12 @@
 # Empirical verification of the central limit theorem.
 
 # Recall: For X_1, X_2, .. a sequence of independent and identically distributed
-#random variables such that the E(X_i) = mu and 0 < var(X_i) = sig^2 < infty, 
+#random variables such that E(X_i) = mu and 0 < var(X_i) = sig^2 < infty, 
 #then : Y_n = 1/sqrt(n* sig^2) * sum_{i=1}^n (X_i - mu) -> Z for Z ~ N(0,1).
 # ---- Prove this for X_i ~ Bernoulli(p). ---
 
 #Let m = 10^4 the number of repetitions of the MonteCarlo simulation
-#For a samle size n = (50,200,1000), 
+#For a sample size n = (50,200,1000), 
 # 1. Generate m realisations y_n of Y_n and store them in a vector y
 # 2. Plot a normalized histogram of y
 # 3. Plot the qqplot of y using qqnorm.
@@ -44,8 +44,4 @@ lines(sort(Z), dnorm(sort(Z), mean = 0, sd=1))
 # QQplot ------------------------------------------------------------------
 qqnorm(y)
 
-
- 
-
-
- 
+# See png files for illustrations
